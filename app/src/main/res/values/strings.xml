@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">MidtermProject</string>
+    <string name="enter_your_guess">Enter your guess</string>
+    <string name="ok">OK</string>
+    <string name="attempts_0">Attempts: 0</string>
+    <string name="delete">Delete</string>
+    <string name="player_name">Player Name</string>
+    <string name="score">Score</string>
+    <string name="play_game">Play Game</string>
+    <string name="welcome_to_the_game">Welcome to the game!</string>
+    <string name="view_highscores">View HighScores</string>
+    <string name="welcome_to_the_game_main">Welcome to the game!</string>
+    <string name="play_game_main">Play Game</string>
+    <string name="view_high_scores">View High Scores</string>
 </resources>
