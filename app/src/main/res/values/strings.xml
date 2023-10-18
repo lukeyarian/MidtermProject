@@ -12,4 +12,7 @@
     <string name="welcome_to_the_game_main">Welcome to the game!</string>
     <string name="play_game_main">Play Game</string>
     <string name="view_high_scores">View High Scores</string>
+    <string name="enter_number">Enter number</string>
+    <string name="submit">Submit</string>
+    <string name="enter_name">Enter Name</string>
 </resources>

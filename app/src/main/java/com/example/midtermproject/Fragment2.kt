@@ -13,15 +13,22 @@ class Fragment2 : Fragment() {
 
     private lateinit var viewModel: GameViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment2_layout, container, false)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        return inflater.inflate(R.layout.fragment2_layout, container, false)
+    }
 
-        viewModel = ViewModelProvider(requireParentFragment()).get(GameViewModel::class.java)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-        viewModel.guessCount.observe(viewLifecycleOwner, Observer { attempts ->
-            view.findViewById<TextView>(R.id.attemptsTextView).text = "Attempts: $attempts"
+        viewModel = ViewModelProvider(requireActivity()).get(GameViewModel::class.java)
+
+        val attemptsTextView = view.findViewById<TextView>(R.id.attemptsTextView)
+
+        viewModel.guessCount.observe(viewLifecycleOwner, { count ->
+            attemptsTextView.text = "Attempts: $count"
         })
-
-        return view
     }
 }
